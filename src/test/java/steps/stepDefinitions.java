@@ -35,28 +35,7 @@ public class stepDefinitions {
         }
     }
 
-    @When("Kullanıcı {string} bölümüne gelir")
-    public void elektronikGelir(String jsonParameterName){
-        try{
-            BaseMethods baseMethods=new BaseMethods();
-            baseMethods.click(jsonParameterName);
-            LogFunction.logStepResult(scenario, "Kullanıcı elektronik tuşuna basar");
-        } catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    @And("Kullanıcı {string}'a tıklar")
-    public void telefonAksesuarlaraGit(String jsonParameterName) {
-        try{
-            BaseMethods baseMethods=new BaseMethods();
-            baseMethods.click(jsonParameterName);
-            LogFunction.logStepResult(scenario, "Kullanıcı telefon ve aksesuarlar kategorisine gider");
-        } catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
-    @And("Kullancı {string}'a {string} yazar")
+    @When("Kullancı {string}'a {string} yazar")
     public void aramaKutusunaSamsungYazar(String jsonParameterName,String urun) {
         try{
             BaseMethods baseMethods=new BaseMethods();
@@ -66,12 +45,13 @@ public class stepDefinitions {
             System.out.println(e.getMessage());
         }
     }
+
     @Then("Gelen ürünlerden ilkinin {string} ve {string} alır")
-    public void ilkUrunIsimVeFiyat(String productName,String productPrice)
+    public void ilkUrunIsimVeFiyat(String productBox,String productName,String productPrice)
     {
         try{
             samsungPageMethods samsungPage=new samsungPageMethods();
-            samsungPage.displayFirstProduct(productName,productPrice);
+            samsungPage.displayFirstProduct(productBox, productName,productPrice);
         }
         catch(Exception e){
             System.out.println(e.getMessage());

@@ -20,7 +20,7 @@ public class BaseMethods {
             WebElement element = waitUntilVisibleByLocator(driver,locator);
             element.click();
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
             throw new AssertionError("error occurred (click)"+e.getMessage());
         }
     }
@@ -32,7 +32,7 @@ public class BaseMethods {
             element.clear();
             element.sendKeys(searchText);
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
             throw new AssertionError("error occurred (searc)"+e.getMessage());
         }
     }

@@ -1,7 +1,7 @@
 [
   {
     "key": "ELEKTRONIK_BTN",
-    "value": "//android.widget.ImageView[@content-desc='elektronik ürünlerde fırsatları kaçırma']",
+    "value": "//android.widget.ImageView[@content-desc=Samsung]",
     "locatorType": "xpath"
   },
   {
@@ -11,17 +11,22 @@
   },
   {
     "key": "SEARCH_BAR",
-    "value": "//android.widget.EditText",
+    "value": "//android.widget.EditText[@resource-id=com.pozitron.hepsiburada:id/etSearchBox]",
+    "locatorType": "xpath"
+  },
+  {
+    "key": "PRODUCT_BOX",
+    "value": "//android.view.ViewGroup[@resource-id='com.pozitron.hepsiburada:id/clProductBoxBottom']",
     "locatorType": "xpath"
   },
   {
     "key": "PRODUCT_NAME",
-    "value": "(//android.widget.TextView[@text='Samsung']/following-sibling::android.widget.TextView[1])[1]",
+    "value": "//android.widget.TextView[contains(@text,'Samsung Galaxy')]",
     "locatorType": "xpath"
   },
   {
     "key": "PRODUCT_PRICE",
-    "value": "(//android.widget.TextView[@text='Samsung'])[1]/following-sibling::android.widget.TextView[contains(@text, 'Satış Fiyatı')]",
+    "value": "//android.widget.TextView[contains(@text,'TL')]",
     "locatorType": "xpath"
   }
 ]
