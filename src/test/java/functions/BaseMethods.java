@@ -1,6 +1,8 @@
 package functions;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.DriverManager;
@@ -29,7 +31,11 @@ public class BaseMethods {
         try{
             By locator= LocatorUtils.getLocator(locatorKey);
             WebElement element = waitUntilVisibleByLocator(driver,locator);
+            if (element == null) {
+                throw new AssertionError("Element bulunamadı: " + locatorKey);
+            }
             element.sendKeys(searchText);
+            driver.pressKey(new KeyEvent(AndroidKey.ENTER));
         }catch (Exception e){
             System.out.println(e.getMessage());
             throw new AssertionError("error occurred (searc)"+e.getMessage());

@@ -35,7 +35,19 @@ public class stepDefinitions {
         }
     }
 
-    @When("Kullancı {string}'a {string} yazar")
+    @When("{string}'a tıklar")
+    public void aramaButonunaTikla(String jsonParameterName){
+        try{
+            BaseMethods baseMethods = new BaseMethods();
+            baseMethods.click(jsonParameterName);
+            LogFunction.logStepResult(scenario, "Arama baslatildi");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    @And("Kullancı {string}'a {string} yazar")
     public void aramaKutusunaSamsungYazar(String jsonParameterName,String urun) {
         try{
             BaseMethods baseMethods=new BaseMethods();
