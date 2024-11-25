@@ -29,7 +29,6 @@ public class BaseMethods {
         try{
             By locator= LocatorUtils.getLocator(locatorKey);
             WebElement element = waitUntilVisibleByLocator(driver,locator);
-            element.clear();
             element.sendKeys(searchText);
         }catch (Exception e){
             System.out.println(e.getMessage());
