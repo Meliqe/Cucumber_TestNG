@@ -6,7 +6,7 @@
   },
   {
     "key": "PRODUCT_NAME",
-    "value": "//android.widget.TextView[contains(@text,'Samsung Galaxy')]",
+    "value": "//android.widget.TextView[contains(@text,'Samsung')]",
     "locatorType": "xpath"
   },
   {

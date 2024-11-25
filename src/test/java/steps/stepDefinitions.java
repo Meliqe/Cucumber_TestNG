@@ -59,11 +59,11 @@ public class stepDefinitions {
     }
 
     @Then("Gelen ürünlerden ilkinin {string} ve {string} alır")
-    public void ilkUrunIsimVeFiyat(String productBox,String productName,String productPrice)
+    public void ilkUrunIsimVeFiyat(String productName,String productPrice)
     {
         try{
             samsungPageMethods samsungPage=new samsungPageMethods();
-            samsungPage.displayFirstProduct(productBox, productName,productPrice);
+            samsungPage.displayFirstProduct(productName,productPrice);
         }
         catch(Exception e){
             System.out.println(e.getMessage());
