@@ -1,8 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Cucumber Test Suite" parallel="tests" thread-count="2">
     <test name="Cucumber Tests">
+        <parameter name="deviceName" value="emulator-5554"></parameter>
+        <parameter name="platformName" value="Android"></parameter>
+        <parameter name="platformVersion" value="14.0"></parameter>
+        <parameter name="port" value="4723"></parameter>
         <classes>
             <class name="runners.TestNGRunner" />
+        </classes>
+    </test>
+
+    <test name="Cucumber Tests-2">
+        <parameter name="deviceName" value="emulator-5556"></parameter>
+        <parameter name="platformName" value="Android"></parameter>
+        <parameter name="platformVersion" value="14.0"></parameter>
+        <parameter name="port" value="4724"></parameter>
+        <classes>
+            <class name="runners.TestNGRunner2" />
         </classes>
     </test>
 </suite>

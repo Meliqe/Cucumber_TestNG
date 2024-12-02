@@ -11,7 +11,7 @@ public class Hooks {
     @Before
     public void startDriver() {
         try {
-            DriverManager.setDriver();
+           // DriverManager.setDriver();
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Driver başlatılamadı: " + e.getMessage());
